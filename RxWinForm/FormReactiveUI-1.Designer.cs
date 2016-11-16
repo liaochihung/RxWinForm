@@ -83,9 +83,9 @@
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(12, 122);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(50, 12);
+            this.label3.Size = new System.Drawing.Size(76, 12);
             this.label3.TabIndex = 3;
-            this.label3.Text = "Input text";
+            this.label3.Text = "Input sentences";
             // 
             // FormReactiveUI_1
             // 

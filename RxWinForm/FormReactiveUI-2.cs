@@ -22,11 +22,12 @@ namespace RxWinForm
 
             this.Bind(VM, x => x.UserName, x => x.textBox1.Text);
             this.Bind(VM, x => x.Password, x => x.textBox2.Text);
-            this.Bind(VM, x => x.Progress, x => x.progressBar1.Value);
+            //this.Bind(VM, x => x.Progress, x => x.progressBar1.Value);
 
             this.BindCommand(VM, x => x.CmdProcessLoginAsync, x => x.btnLogin);
 
-            VM.CanUserLogin.BindTo(this, x => x.btnLogin.Visible);
+            // extra bind
+            //VM.CanUserLogin.BindTo(this, x => x.btnLogin.Visible);
 
             /*
              // Invoke a command whenever the Escape key is pressed
@@ -39,8 +40,8 @@ this.WhenAnyObservable(x => x.ViewModel.Cancel)
     .Subscribe(_ => this.Close());
              */
             //this.Events()
-            this.WhenAnyObservable(x => x.VM.CmdCancel)
-                .Subscribe(_ => this.Close());
+            //this.WhenAnyObservable(x => x.VM.CmdCancel)
+            //    .Subscribe(_ => this.Close());
         }
 
         public ViewModel2 VM { get; set; }
