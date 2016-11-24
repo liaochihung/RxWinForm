@@ -83,6 +83,12 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormMessageBus.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMessageBus.Designer.cs">
+      <DependentUpon>FormMessageBus.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormMouseDraw.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -104,10 +110,16 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ViewModels\LoginViewModel.cs" />
+    <Compile Include="ViewModels\MessageBusViewModel.cs" />
+    <Compile Include="ViewModels\PublisherViewModel.cs" />
+    <Compile Include="ViewModels\SubscriberViewModel.cs" />
     <Compile Include="ViewModels\ViewModel1.cs" />
     <Compile Include="ViewModels\ViewModel2.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormMessageBus.resx">
+      <DependentUpon>FormMessageBus.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormMouseDraw.resx">
       <DependentUpon>FormMouseDraw.cs</DependentUpon>
@@ -137,13 +149,9 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <None Include="README.md" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Run.gif" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

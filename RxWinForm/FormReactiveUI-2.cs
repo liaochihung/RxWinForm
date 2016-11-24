@@ -13,12 +13,11 @@ namespace RxWinForm
             InitializeComponent();
 
             var context = SynchronizationContext.Current;
-
-            VM=new ViewModel2(
+            VM = new ViewModel2(
                 context,
-                this.WhenAnyValue(x=>x.textBox1.Text),
-                this.WhenAnyValue(x=>x.textBox2.Text),
-                this.WhenAnyValue(x=>x.progressBar1.Value));
+                this.WhenAnyValue(x => x.textBox1.Text),
+                this.WhenAnyValue(x => x.textBox2.Text),
+                this.WhenAnyValue(x => x.progressBar1.Value));
 
             this.Bind(VM, x => x.UserName, x => x.textBox1.Text);
             this.Bind(VM, x => x.Password, x => x.textBox2.Text);

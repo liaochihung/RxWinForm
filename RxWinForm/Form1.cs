@@ -47,5 +47,12 @@ namespace RxWinForm
             frm.StartPosition = FormStartPosition.CenterParent;
             frm.ShowDialog();
         }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            var frm = new FormMessageBus();
+            frm.StartPosition = FormStartPosition.CenterParent;
+            frm.ShowDialog();
+        }
     }
 }
